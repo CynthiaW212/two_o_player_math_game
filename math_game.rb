@@ -27,8 +27,7 @@ class MathGame
       puts "#{player.name}: Seriously? No!"
       player.lose_life
     end
-    # other = (@current_player == @player1)? @player2 : @player1
-    # puts "#{player.name} : #{player.lives} /3 vs #{other.name}: #{other.lives} /3"
+    # record the score for both players
     puts "#{@player1.name} : #{@player1.lives}/3 vs #{@player2.name}: #{@player2.lives}/3"
   end
 
@@ -43,9 +42,7 @@ class MathGame
 
   def announce_winner
     winner = @player1.lives.zero? ? @player2 : @player1
-    loser = @player1.lives.zero? ? @player1 : @player2
-    puts "#{winner.name} wins with a score of #{winner.lives} / 3"
-    # puts "#{loser.name}: Your final score is #{loser.lives}"
+    puts "#{winner.name} wins with a score of #{winner.lives} /3"
   end
   
   def play
@@ -57,8 +54,7 @@ class MathGame
     announce_winner
     puts "-----GAME OVER -----"
     puts "Good Bye !"
-
-  
+      
   end
 
 end
